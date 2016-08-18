@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
 
+// Versioning information
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = 0
+
 android {
 
     compileSdkVersion 23
@@ -10,8 +15,8 @@ android {
         applicationId "com.orogersilva.authview"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch * 1
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
